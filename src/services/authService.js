@@ -9,7 +9,7 @@ export async function login(authDetail) {
     requestOptions
   );
   if (!response.ok) {
-    throw { message: response.statusText, status: response.status };
+    throw { message: response.statusText, status: response.status }; //eslint disable-line
   }
   const data = await response.json();
 
@@ -30,7 +30,7 @@ export async function register(authDetail) {
   const response = await fetch(
     `${process.env.REACT_APP_HOST}/register`,
     requestOptions
-  ); //eslint disable-line
+  );
   if (!response.ok) {
     throw { message: response.statusText, status: response.status }; //eslint disable-line
   }
