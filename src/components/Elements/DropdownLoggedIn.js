@@ -12,7 +12,7 @@ export const DropdownLoggedIn = ({ setDropdown }) => {
     async function fetchData() {
       try {
         const data = await getUser();
-        data.email ? setUser(data) : handleLogout(); //eslint disable-line
+        data.email ? setUser(data) : handleLogout();
       } catch (error) {
         toast.error(error.message, {
           closeButton: true,
@@ -21,7 +21,7 @@ export const DropdownLoggedIn = ({ setDropdown }) => {
       }
     }
     fetchData();
-  }, []); //eslint disable-line
+  }, []); //eslint-disable-line
 
   function handleLogout() {
     logout();
